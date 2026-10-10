@@ -9,7 +9,7 @@ import {describe, test, expect} from 'vitest';
 const refBundle = fs.readFileSync('dist/reference/v8.mjs', 'utf8');
 const validStyle = JSON.stringify({version: 8, sources: {}, layers: []});
 
-describe('@maplibre/maplibre-gl-style-spec npm package', () => {
+describe('@cgcs2000/maplibre-gl-style-spec npm package', () => {
     test('files build', async () => {
         const dirContents = await readdir('dist');
         expect(dirContents).toContain('gl-style-format.cjs');
