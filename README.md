@@ -5,7 +5,7 @@
 
 # MapLibre Style Specification & Utilities
 
-[![NPM Version](https://badge.fury.io/js/@maplibre%2Fmaplibre-gl-style-spec.svg)](https://npmjs.org/package/@maplibre/maplibre-gl-style-spec)
+[![NPM Version](https://badge.fury.io/js/@cgcs2000%2Fmaplibre-gl-style-spec.svg)](https://npmjs.org/package/@cgcs2000/maplibre-gl-style-spec)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg?style=flat)](LICENSE.txt) [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://opensource.org/licenses/BSD-3-Clause) [![codecov](https://codecov.io/gh/maplibre/maplibre-style-spec/branch/main/graph/badge.svg)](https://codecov.io/gh/maplibre/maplibre-style-spec)
 
 This repository contains code and reference files that define the MapLibre style specification and provides some utilities for working with MapLibre styles.
@@ -55,7 +55,7 @@ The MapLibre style specification and utilities are published as a separate npm
 package so that they can be installed without the bulk of GL JS.
 
 ```bash
-npm install @maplibre/maplibre-gl-style-spec
+npm install @cgcs2000/maplibre-gl-style-spec
 ```
 
 ## CLI Tools
@@ -63,7 +63,7 @@ npm install @maplibre/maplibre-gl-style-spec
 If you install this package globally, you will have access to several CLI tools.
 
 ```bash
-npm install @maplibre/maplibre-gl-style-spec --global
+npm install @cgcs2000/maplibre-gl-style-spec --global
 ```
 
 ### `gl-style-migrate`

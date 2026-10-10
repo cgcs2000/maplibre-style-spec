@@ -1,5 +1,5 @@
 {
-  "name": "@maplibre/maplibre-gl-style-spec",
+  "name": "@cgcs2000/maplibre-gl-style-spec",
   "description": "a specification for maplibre styles",
   "version": "26.4.2",
   "author": "MapLibre",
@@ -18,7 +18,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npm run generate-style-spec && rolldown -c rolldown.config.ts && cp ./src/reference/v8.json ./dist/latest.json",
+    "build": "npm run generate-style-spec && rolldown -c rolldown.config.ts && node -e \"require('node:fs').copyFileSync('./src/reference/v8.json', './dist/latest.json')\"",
     "generate-style-spec": "node build/generate-style-spec.ts",
     "generate-typings": "cross-env BUILD=types rolldown -c rolldown.config.ts",
     "generate-docs": "node ${WATCH+--watch} build/generate-docs.ts",
@@ -36,11 +36,12 @@
     "lint": "eslint",
     "typecheck": "npm run build && tsgo --noEmit && tsgo --project tsconfig.dist.json",
     "prepare": "npm run generate-style-spec",
-    "fmt": "oxfmt"
+    "fmt": "oxfmt",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maplibre/maplibre-style-spec"
+    "url": "https://github.com/cgcs2000/maplibre-style-spec"
   },
   "bin": {
     "gl-style-migrate": "dist/gl-style-migrate.mjs",
