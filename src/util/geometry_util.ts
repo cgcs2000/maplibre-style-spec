@@ -22,23 +22,23 @@ export function getLngLatFromTileCoord(
     const tilesAtZoom = Math.pow(2, canonical.z);
     const x = (coord[0] / EXTENT + canonical.x) / tilesAtZoom;
     const y = (coord[1] / EXTENT + canonical.y) / tilesAtZoom;
-    return [lngFromMercatorXfromLng(x), latFromMercatorY(y)];
+    return [lngFromMercatorX(x), latFromMercatorY(y)];
 }
 
 function mercatorXfromLng(lng: number) {
     return (180 + lng) / 360;
 }
 
-function lngFromMercatorXfromLng(mercatorX: number) {
+function lngFromMercatorX(mercatorX: number) {
     return mercatorX * 360 - 180;
 }
 
 function mercatorYfromLat(lat: number) {
-    return (180 - (180 / Math.PI) * Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360))) / 360;
+    return (90 - lat) / 360;
 }
 
 function latFromMercatorY(mercatorY: number) {
-    return (360 / Math.PI) * Math.atan(Math.exp(((180 - mercatorY * 360) * Math.PI) / 180)) - 90;
+    return 90 - mercatorY * 360;
 }
 
 export function updateBBox(bbox: BBox, coord: GeoJSON.Position) {

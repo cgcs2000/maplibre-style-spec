@@ -26,7 +26,7 @@ import type {StyleSpecification} from './types.g';
  * If omitted, the latest style spec is used.
  * @returns an array of errors, or an empty array if no errors are found.
  * @example
- *   const validate = require('@maplibre/maplibre-gl-style-spec/').validateStyleMin;
+ *   const validate = require('@cgcs2000/maplibre-gl-style-spec/').validateStyleMin;
  *   const errors = validate(style);
  */
 export function validateStyleMin(
